@@ -57,3 +57,8 @@ final appRouterProvider = Provider<GoRouter>((ref) {
 //   '/signUp',
 //   '/forgot-password',
 // ];
+final currentLocationProvider = Provider<String>((ref) {
+  final router = ref.watch(appRouterProvider);
+  print('test001');
+  return router.state.name ?? '/';
+});

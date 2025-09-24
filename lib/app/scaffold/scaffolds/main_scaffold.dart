@@ -15,7 +15,7 @@ class MainScaffold extends ConsumerWidget {
         ref: ref,
         title: data.name,
         actions: [
-          AnimatedTab(titles: IndexState.values.map((e) => e.name).toList()),
+          AnimatedTab(titles: IndexState.values.map((e) => e).toList()),
           SizedBox(width: 8),
           positiveButton(
             text: localeState.state.locale.languageCode.toUpperCase(),
@@ -43,13 +43,13 @@ Widget mainContents(Widget child) {
 final indexProvider = StateProvider<int>((ref) => 0);
 
 class AnimatedTab extends ConsumerWidget {
-  final List<String> titles;
+  final List<IndexState> titles;
 
   const AnimatedTab({super.key, required this.titles});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final selectedIndex = ref.watch(indexProvider);
+    final selectedIndex = ref.watch(indexStateProvider);
 
     return ConstrainedBox(
       constraints: BoxConstraints(maxWidth: 600, minWidth: 400),
@@ -58,14 +58,16 @@ class AnimatedTab extends ConsumerWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: List.generate(titles.length, (index) {
-            final isSelected = selectedIndex == index;
+            final isSelected = selectedIndex.idx == index;
 
             return Padding(
               padding: const EdgeInsets.all(4),
               child: GestureDetector(
                 onTap: () {
-                  ref.read(indexProvider.notifier).state = index;
-                  ref.read(appRouterProvider).goNamed(titles[index]);
+                  ref.read(indexStateProvider.notifier).state = IndexState
+                      .values
+                      .firstWhere((state) => state.idx == index);
+                  ref.read(appRouterProvider).goNamed(titles[index].name);
                 },
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
@@ -81,7 +83,7 @@ class AnimatedTab extends ConsumerWidget {
                   ),
                   child: Center(
                     child: Text(
-                      titles[index],
+                      titles[index].name,
                       style: TextStyle(
                         color: isSelected ? Colors.white : Colors.black,
                         fontWeight:
