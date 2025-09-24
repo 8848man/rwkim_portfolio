@@ -2,52 +2,52 @@ import './_index.dart';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-    initialLocation: RouterPath.home.path,
+    initialLocation: RouterPath.indexPath.path,
     routes: [
       ShellRoute(
         builder: (context, state, child) {
-          return HomeScaffold(child: child);
+          return IndexScaffold(child: child);
         },
         routes: [
           GoRoute(
-            path: RouterPath.home.path,
-            name: RouterPath.home.name,
-            builder: (_, __) => const HomeScreen(),
+            path: RouterPath.indexPath.path,
+            name: RouterPath.indexPath.name,
+            builder: (_, __) => const IndexScreen(),
           ),
-          // GoRoute(
-          //   path: RouterPath.signUp.path,
-          //   name: RouterPath.signUp.name,
-          //   builder: (_, __) => const SignUpScreen(),
-          // ),
         ],
       ),
-      // ShellRoute(
-      //   builder: (context, state, child) {
-      //     return HomeScaffold(child: child);
-      //   },
-      //   routes: [
-      //     GoRoute(
-      //       path: RouterPath.dashboard.path,
-      //       name: RouterPath.dashboard.name,
-      //       builder: (_, __) => const DashboardScreen(),
-      //     ),
-      //     GoRoute(
-      //       path: RouterPath.lesson.path,
-      //       name: RouterPath.lesson.name,
-      //       builder: (_, __) => const LessonScreen(),
-      //     ),
-      //     GoRoute(
-      //       path: RouterPath.life.path,
-      //       name: RouterPath.life.name,
-      //       builder: (_, __) => const LifeScreen(),
-      //     ),
-      //     GoRoute(
-      //       path: RouterPath.statistics.path,
-      //       name: RouterPath.statistics.name,
-      //       builder: (_, __) => const StatisticsScreen(),
-      //     ),
-      //   ],
-      // ),
+      ShellRoute(
+        builder: (context, state, child) {
+          return MainScaffold(child: child);
+        },
+        routes: [
+          GoRoute(
+            path: RouterPath.aboutMePath.path,
+            name: RouterPath.aboutMePath.name,
+            builder: (_, __) => const AboutMeScreen(),
+          ),
+          GoRoute(
+            path: RouterPath.tendencyPath.path,
+            name: RouterPath.tendencyPath.name,
+            builder: (_, __) => const TentencyScreen(),
+          ),
+          GoRoute(
+            path: RouterPath.skillPath.path,
+            name: RouterPath.skillPath.name,
+            builder: (_, __) => const SkillScreen(),
+          ),
+          GoRoute(
+            path: RouterPath.projectsPath.path,
+            name: RouterPath.projectsPath.name,
+            builder: (_, __) => const ProjectsScreen(),
+          ),
+          GoRoute(
+            path: RouterPath.appealPointPath.path,
+            name: RouterPath.appealPointPath.name,
+            builder: (_, __) => const AppealPointScreen(),
+          ),
+        ],
+      ),
     ],
   );
 });

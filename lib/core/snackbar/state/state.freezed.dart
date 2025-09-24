@@ -12,7 +12,8 @@ part of 'state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$SnackBarState {
@@ -30,8 +31,9 @@ mixin _$SnackBarState {
 /// @nodoc
 abstract class $SnackBarStateCopyWith<$Res> {
   factory $SnackBarStateCopyWith(
-          SnackBarState value, $Res Function(SnackBarState) then) =
-      _$SnackBarStateCopyWithImpl<$Res, SnackBarState>;
+    SnackBarState value,
+    $Res Function(SnackBarState) then,
+  ) = _$SnackBarStateCopyWithImpl<$Res, SnackBarState>;
   @useResult
   $Res call({String message, bool isShow, int durationSec});
 }
@@ -55,20 +57,26 @@ class _$SnackBarStateCopyWithImpl<$Res, $Val extends SnackBarState>
     Object? isShow = null,
     Object? durationSec = null,
   }) {
-    return _then(_value.copyWith(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      isShow: null == isShow
-          ? _value.isShow
-          : isShow // ignore: cast_nullable_to_non_nullable
-              as bool,
-      durationSec: null == durationSec
-          ? _value.durationSec
-          : durationSec // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            message:
+                null == message
+                    ? _value.message
+                    : message // ignore: cast_nullable_to_non_nullable
+                        as String,
+            isShow:
+                null == isShow
+                    ? _value.isShow
+                    : isShow // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            durationSec:
+                null == durationSec
+                    ? _value.durationSec
+                    : durationSec // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -76,8 +84,9 @@ class _$SnackBarStateCopyWithImpl<$Res, $Val extends SnackBarState>
 abstract class _$$SnackBarStateImplCopyWith<$Res>
     implements $SnackBarStateCopyWith<$Res> {
   factory _$$SnackBarStateImplCopyWith(
-          _$SnackBarStateImpl value, $Res Function(_$SnackBarStateImpl) then) =
-      __$$SnackBarStateImplCopyWithImpl<$Res>;
+    _$SnackBarStateImpl value,
+    $Res Function(_$SnackBarStateImpl) then,
+  ) = __$$SnackBarStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String message, bool isShow, int durationSec});
@@ -88,8 +97,9 @@ class __$$SnackBarStateImplCopyWithImpl<$Res>
     extends _$SnackBarStateCopyWithImpl<$Res, _$SnackBarStateImpl>
     implements _$$SnackBarStateImplCopyWith<$Res> {
   __$$SnackBarStateImplCopyWithImpl(
-      _$SnackBarStateImpl _value, $Res Function(_$SnackBarStateImpl) _then)
-      : super(_value, _then);
+    _$SnackBarStateImpl _value,
+    $Res Function(_$SnackBarStateImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SnackBarState
   /// with the given fields replaced by the non-null parameter values.
@@ -100,28 +110,36 @@ class __$$SnackBarStateImplCopyWithImpl<$Res>
     Object? isShow = null,
     Object? durationSec = null,
   }) {
-    return _then(_$SnackBarStateImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      isShow: null == isShow
-          ? _value.isShow
-          : isShow // ignore: cast_nullable_to_non_nullable
-              as bool,
-      durationSec: null == durationSec
-          ? _value.durationSec
-          : durationSec // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$SnackBarStateImpl(
+        message:
+            null == message
+                ? _value.message
+                : message // ignore: cast_nullable_to_non_nullable
+                    as String,
+        isShow:
+            null == isShow
+                ? _value.isShow
+                : isShow // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        durationSec:
+            null == durationSec
+                ? _value.durationSec
+                : durationSec // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SnackBarStateImpl implements _SnackBarState {
-  const _$SnackBarStateImpl(
-      {this.message = '', this.isShow = false, this.durationSec = 2});
+  const _$SnackBarStateImpl({
+    this.message = '',
+    this.isShow = false,
+    this.durationSec = 2,
+  });
 
   @override
   @JsonKey()
@@ -162,10 +180,11 @@ class _$SnackBarStateImpl implements _SnackBarState {
 }
 
 abstract class _SnackBarState implements SnackBarState {
-  const factory _SnackBarState(
-      {final String message,
-      final bool isShow,
-      final int durationSec}) = _$SnackBarStateImpl;
+  const factory _SnackBarState({
+    final String message,
+    final bool isShow,
+    final int durationSec,
+  }) = _$SnackBarStateImpl;
 
   @override
   String get message;

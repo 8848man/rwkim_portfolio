@@ -1,1 +1,10 @@
 export 'package:rw_portfolio/app/common/packages.dart';
+export 'package:rw_portfolio/core/design_system/public.dart';
+export 'package:rw_portfolio/core/locale/public.dart';
+export 'package:rw_portfolio/core/index_manager/public.dart'
+    show indexStateProvider;
+export 'package:rw_portfolio/app/scaffold/app_bars/app_bar.dart';
+export 'package:rw_portfolio/core/index_manager/state/index_state.dart';
+export 'package:rw_portfolio/core/utils/extensions.dart';
+export 'package:rw_portfolio/app/router/public.dart';
+export 'package:rw_portfolio/app/scaffold/end_drawer/end_drawer.dart';
