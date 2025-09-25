@@ -29,7 +29,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: RouterPath.tendencyPath.path,
             name: RouterPath.tendencyPath.name,
-            builder: (_, __) => const TentencyScreen(),
+            builder: (_, __) => const TendencyScreen(),
           ),
           GoRoute(
             path: RouterPath.skillPath.path,
@@ -57,8 +57,3 @@ final appRouterProvider = Provider<GoRouter>((ref) {
 //   '/signUp',
 //   '/forgot-password',
 // ];
-final currentLocationProvider = Provider<String>((ref) {
-  final router = ref.watch(appRouterProvider);
-  print('test001');
-  return router.state.name ?? '/';
-});

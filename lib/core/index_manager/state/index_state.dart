@@ -1,5 +1,3 @@
-import 'package:rw_portfolio/app/router/app_router.dart';
-
 import '../_index.dart';
 
 enum IndexState {
@@ -15,10 +13,5 @@ enum IndexState {
 }
 
 final indexStateProvider = StateProvider<IndexState>((ref) {
-  final router = ref.watch(appRouterProvider);
-  final String testLocation = ref.watch(currentLocationProvider);
-  print('test002, testLocation is $testLocation');
-  return IndexState.values.firstWhere(
-    (state) => state.name == router.state.name,
-  );
+  return IndexState.aboutMe;
 });
