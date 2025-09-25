@@ -37,7 +37,21 @@ Widget mainDrawer() {
 }
 
 Widget mainContents(Widget child) {
-  return Stack(children: [child]);
+  return Stack(children: [mainBackground(), child]);
+}
+
+Widget mainBackground() {
+  return Container(
+    width: double.infinity,
+    height: double.infinity,
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: const AssetImage("lib/assets/images/main_image.webp"),
+        fit: BoxFit.contain, // 원본 크기 유지
+        alignment: Alignment.center, // 중앙 정렬
+      ),
+    ),
+  );
 }
 
 class AnimatedTab extends ConsumerWidget {
