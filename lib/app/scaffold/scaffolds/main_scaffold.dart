@@ -40,8 +40,6 @@ Widget mainContents(Widget child) {
   return Stack(children: [child]);
 }
 
-final indexProvider = StateProvider<int>((ref) => 0);
-
 class AnimatedTab extends ConsumerWidget {
   final List<IndexState> titles;
 
@@ -64,9 +62,6 @@ class AnimatedTab extends ConsumerWidget {
               padding: const EdgeInsets.all(4),
               child: GestureDetector(
                 onTap: () {
-                  ref.read(indexStateProvider.notifier).state = IndexState
-                      .values
-                      .firstWhere((state) => state.idx == index);
                   ref.read(appRouterProvider).goNamed(titles[index].name);
                 },
                 child: AnimatedContainer(

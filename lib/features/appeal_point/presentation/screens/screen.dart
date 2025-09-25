@@ -5,6 +5,9 @@ class AppealPointScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(indexStateProvider.notifier).state = IndexState.appealPoint;
+    });
     return Container(child: Center(child: Text("appeal point")));
   }
 }
