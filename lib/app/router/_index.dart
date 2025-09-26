@@ -11,3 +11,4 @@ export 'package:rw_portfolio/features/appeal_point/presentation/public.dart';
 export 'package:rw_portfolio/features/projects/presentation/public.dart';
 export 'package:rw_portfolio/features/skill/presentation/public.dart';
 export 'package:rw_portfolio/features/tendency/presentation/public.dart';
+export 'package:rw_portfolio/app/common/packages.dart';

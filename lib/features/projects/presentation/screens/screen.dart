@@ -5,9 +5,13 @@ class ProjectsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(indexStateProvider.notifier).state = IndexState.projects;
-    });
-    return Container();
+    return Center(
+      child: Container(
+        height: 300,
+        width: 300,
+        color: Colors.white,
+        child: Text('projects'),
+      ),
+    );
   }
 }

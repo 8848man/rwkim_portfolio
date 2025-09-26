@@ -18,33 +18,38 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       ),
       ShellRoute(
         builder: (context, state, child) {
-          return MainScaffold(child: child);
+          return MainScaffold(childPath: state.fullPath, child: child);
         },
         routes: [
           GoRoute(
             path: RouterPath.aboutMePath.path,
             name: RouterPath.aboutMePath.name,
-            builder: (_, __) => const AboutMeScreen(),
+            pageBuilder:
+                (_, __) => const NoTransitionPage(child: AboutMeScreen()),
           ),
           GoRoute(
             path: RouterPath.tendencyPath.path,
             name: RouterPath.tendencyPath.name,
-            builder: (_, __) => const TendencyScreen(),
+            pageBuilder:
+                (_, __) => const NoTransitionPage(child: TendencyScreen()),
           ),
           GoRoute(
             path: RouterPath.skillPath.path,
             name: RouterPath.skillPath.name,
-            builder: (_, __) => const SkillScreen(),
+            pageBuilder:
+                (_, __) => const NoTransitionPage(child: SkillScreen()),
           ),
           GoRoute(
             path: RouterPath.projectsPath.path,
             name: RouterPath.projectsPath.name,
-            builder: (_, __) => const ProjectsScreen(),
+            pageBuilder:
+                (_, __) => const NoTransitionPage(child: ProjectsScreen()),
           ),
           GoRoute(
             path: RouterPath.appealPointPath.path,
             name: RouterPath.appealPointPath.name,
-            builder: (_, __) => const AppealPointScreen(),
+            pageBuilder:
+                (_, __) => const NoTransitionPage(child: AppealPointScreen()),
           ),
         ],
       ),
