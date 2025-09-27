@@ -142,6 +142,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Created By RWKim'**
   String get createdBy;
+
+  /// No description provided for @amFirstSectionUpperString.
+  ///
+  /// In en, this message translates to:
+  /// **'Specialist of State Management'**
+  String get amFirstSectionUpperString;
+
+  /// No description provided for @amFirstSectionLowerString.
+  ///
+  /// In en, this message translates to:
+  /// **'Obsessed on Architecture'**
+  String get amFirstSectionLowerString;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

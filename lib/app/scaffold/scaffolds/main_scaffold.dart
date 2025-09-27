@@ -110,7 +110,7 @@ class AnimatedTab extends ConsumerWidget {
                 onTap: () {
                   ref
                       .read(appRouterProvider)
-                      .goNamed(routeNameFromTitle(titles[index]));
+                      .replaceNamed(routeNameFromTitle(titles[index]));
                 },
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 300),

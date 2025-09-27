@@ -31,4 +31,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get createdBy => 'Created By RWKim';
+
+  @override
+  String get amFirstSectionUpperString => 'Specialist of State Management';
+
+  @override
+  String get amFirstSectionLowerString => 'Obsessed on Architecture';
 }
