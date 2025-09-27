@@ -11,7 +11,6 @@ class MainScaffold extends ConsumerWidget {
     final data = ref.watch(indexStateProvider);
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      print('test003');
       final notifier = ref.read(indexStateProvider.notifier);
       final newState = IndexState.values.firstWhere(
         (e) => e.name == childPath?.replaceFirst('/', ''),
@@ -22,21 +21,28 @@ class MainScaffold extends ConsumerWidget {
       }
     });
     return Scaffold(
-      // backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true, // ✅ body를 AppBar 뒤로 확장
       appBar: myAppBar(
         context: context,
         ref: ref,
-        title: data.name,
+        titleText: mainTitle(data.localized(context)),
         actions: [
-          AnimatedTab(titles: IndexState.values.map((e) => e).toList()),
+          AnimatedTab(
+            titles:
+                IndexState.values
+                    .map((e) => e.localized(context)) // enum → localized string
+                    .toList(),
+          ),
           SizedBox(width: 8),
           positiveButton(
             text: localeState.state.locale.languageCode.toUpperCase(),
             onPressed: () => ref.read(localeProvider.notifier).toggleLocale(),
           ),
           SizedBox(width: 8),
-          Text('Created by Rwkim'),
+          Text(
+            ScaffoldString.createdBy(context),
+            style: TextStyle(color: Colors.white),
+          ),
           SizedBox(width: 20),
         ],
       ),
@@ -50,13 +56,20 @@ Widget mainDrawer() {
   return Drawer();
 }
 
+Widget mainTitle(String title) {
+  return AnimationAppear(
+    key: ValueKey(title),
+    child: Text(title, style: TextStyle(color: Colors.white)),
+  );
+}
+
 Widget mainContents(Widget child, String? childKey) {
-  print('test002, childKey in mainContents: $childKey');
   return Stack(
     children: [
       mainBackground(),
-      PageStackWrapper(
-        pageKey: childKey ?? '/', // childKey가 바뀔 때마다 새로운 wrapper 생성
+      AnimationAppear(
+        key: ValueKey(childKey),
+        animationType: AppearAnimationType.slideRight,
         child: child,
       ),
     ],
@@ -74,7 +87,7 @@ Widget mainBackground() {
 }
 
 class AnimatedTab extends ConsumerWidget {
-  final List<IndexState> titles;
+  final List<String> titles;
 
   const AnimatedTab({super.key, required this.titles});
 
@@ -95,7 +108,9 @@ class AnimatedTab extends ConsumerWidget {
               padding: const EdgeInsets.all(4),
               child: GestureDetector(
                 onTap: () {
-                  ref.read(appRouterProvider).goNamed(titles[index].name);
+                  ref
+                      .read(appRouterProvider)
+                      .goNamed(routeNameFromTitle(titles[index]));
                 },
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
@@ -111,7 +126,7 @@ class AnimatedTab extends ConsumerWidget {
                   ),
                   child: Center(
                     child: Text(
-                      titles[index].name,
+                      titles[index],
                       style: TextStyle(
                         color: isSelected ? Colors.white : Colors.black,
                         fontWeight:
@@ -126,5 +141,22 @@ class AnimatedTab extends ConsumerWidget {
         ),
       ),
     );
+  }
+}
+
+String routeNameFromTitle(String title) {
+  switch (title) {
+    case '저에 대해서':
+      return 'aboutMe';
+    case '성향':
+      return 'tendency';
+    case '보유 역량':
+      return 'skill';
+    case '프로젝트':
+      return 'projects';
+    case '개발자로서 매력 포인트':
+      return 'appealPoint';
+    default:
+      throw Exception('Unknown title: $title');
   }
 }

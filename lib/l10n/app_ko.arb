@@ -5,5 +5,6 @@
   "skill":"보유 역량",
   "tendency" : "성향",
   "projects" : "프로젝트",
-  "appealPoint" : "개발자로서 매력 포인트"
+  "appealPoint" : "개발자로서 매력 포인트",
+  "createdBy" : "제작자 김락원"
 }
