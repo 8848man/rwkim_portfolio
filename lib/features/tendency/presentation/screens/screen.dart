@@ -5,9 +5,6 @@ class TendencyScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(indexStateProvider.notifier).state = IndexState.tendency;
-    });
     return Container();
   }
 }

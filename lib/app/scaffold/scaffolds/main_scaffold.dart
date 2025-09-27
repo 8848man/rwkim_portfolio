@@ -2,13 +2,27 @@ import '../_index.dart';
 
 class MainScaffold extends ConsumerWidget {
   final Widget child;
-  const MainScaffold({super.key, required this.child});
+  final String? childPath;
+  const MainScaffold({super.key, required this.child, this.childPath});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final localeState = ref.watch(localeProvider);
     final data = ref.watch(indexStateProvider);
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      print('test003');
+      final notifier = ref.read(indexStateProvider.notifier);
+      final newState = IndexState.values.firstWhere(
+        (e) => e.name == childPath?.replaceFirst('/', ''),
+        orElse: () => IndexState.aboutMe,
+      );
+      if (notifier.state != newState) {
+        notifier.state = newState;
+      }
+    });
     return Scaffold(
+      // backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true, // ✅ body를 AppBar 뒤로 확장
       appBar: myAppBar(
         context: context,
@@ -27,7 +41,7 @@ class MainScaffold extends ConsumerWidget {
         ],
       ),
       endDrawer: endDrawer(),
-      body: mainContents(child),
+      body: mainContents(child, childPath),
     );
   }
 }
@@ -36,8 +50,27 @@ Widget mainDrawer() {
   return Drawer();
 }
 
-Widget mainContents(Widget child) {
-  return Stack(children: [child]);
+Widget mainContents(Widget child, String? childKey) {
+  print('test002, childKey in mainContents: $childKey');
+  return Stack(
+    children: [
+      mainBackground(),
+      PageStackWrapper(
+        pageKey: childKey ?? '/', // childKey가 바뀔 때마다 새로운 wrapper 생성
+        child: child,
+      ),
+    ],
+  );
+}
+
+Widget mainBackground() {
+  return Positioned.fill(
+    child: Image.asset(
+      "lib/assets/images/main_image.webp",
+      fit: BoxFit.cover, // 화면 꽉 채우기
+      alignment: Alignment.center, // 중앙 기준
+    ),
+  );
 }
 
 class AnimatedTab extends ConsumerWidget {
