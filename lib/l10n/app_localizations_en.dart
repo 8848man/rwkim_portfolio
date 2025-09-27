@@ -27,5 +27,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get projects => 'Projects';
 
   @override
-  String get appealPoint => 'appealPoint as Dev';
+  String get appealPoint => 'AppealPoint as Dev';
+
+  @override
+  String get createdBy => 'Created By RWKim';
 }

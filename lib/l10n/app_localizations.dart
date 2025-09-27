@@ -134,8 +134,14 @@ abstract class AppLocalizations {
   /// No description provided for @appealPoint.
   ///
   /// In en, this message translates to:
-  /// **'appealPoint as Dev'**
+  /// **'AppealPoint as Dev'**
   String get appealPoint;
+
+  /// No description provided for @createdBy.
+  ///
+  /// In en, this message translates to:
+  /// **'Created By RWKim'**
+  String get createdBy;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

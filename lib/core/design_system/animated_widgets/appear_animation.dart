@@ -1,12 +1,6 @@
 import '../_index.dart';
 
-enum AppearAnimationType {
-  fadeIn,
-  slideUp,
-  slideDown,
-  slideLeft,
-  slideRight;
-}
+enum AppearAnimationType { fadeIn, slideUp, slideDown, slideLeft, slideRight }
 
 class AnimationAppear extends StatefulWidget {
   final Widget child;
@@ -15,7 +9,6 @@ class AnimationAppear extends StatefulWidget {
   final Curve curve;
   final bool activeAnimation;
   final bool isAppear;
-  final bool isSlideUp;
   final AppearAnimationType animationType;
 
   const AnimationAppear({
@@ -26,7 +19,6 @@ class AnimationAppear extends StatefulWidget {
     this.curve = Curves.easeOut,
     this.activeAnimation = true,
     this.isAppear = true,
-    this.isSlideUp = true,
     this.animationType = AppearAnimationType.slideUp,
   });
 
@@ -44,21 +36,20 @@ class _AnimationAppearState extends State<AnimationAppear>
   void initState() {
     super.initState();
 
-    _controller = AnimationController(
-      vsync: this,
-      duration: widget.duration,
-    );
+    _controller = AnimationController(vsync: this, duration: widget.duration);
 
     _opacity = Tween<double>(
       begin: 0.0,
       end: 1.0,
-    ).animate(
-      CurvedAnimation(parent: _controller, curve: widget.curve),
-    );
+    ).animate(CurvedAnimation(parent: _controller, curve: widget.curve));
 
     // 슬라이드 방향에 따른 Offset 설정
     _offset = getOffset(
-        widget.animationType, widget.child, _controller, widget.curve);
+      widget.animationType,
+      widget.child,
+      _controller,
+      widget.curve,
+    );
 
     // Delay 후 애니메이션 시작
     Future.delayed(Duration(milliseconds: widget.delayMs), () {
@@ -102,51 +93,42 @@ class _AnimationAppearState extends State<AnimationAppear>
     }
     return SlideTransition(
       position: _offset,
-      child: FadeTransition(
-        opacity: _opacity,
-        child: widget.child,
-      ),
+      child: FadeTransition(opacity: _opacity, child: widget.child),
     );
   }
 }
 
-Animation<Offset> getOffset(AppearAnimationType type, Widget widget,
-    AnimationController controller, Curve curve) {
+Animation<Offset> getOffset(
+  AppearAnimationType type,
+  Widget widget,
+  AnimationController controller,
+  Curve curve,
+) {
   switch (type) {
     case AppearAnimationType.slideUp:
       return Tween<Offset>(
         begin: const Offset(0, 0.1), // 약 10px 아래 (dy: 0.1)
         end: Offset.zero,
-      ).animate(
-        CurvedAnimation(parent: controller, curve: curve),
-      );
+      ).animate(CurvedAnimation(parent: controller, curve: curve));
     case AppearAnimationType.slideDown:
       return Tween<Offset>(
         begin: const Offset(0, -0.1), // 약 10px 위 (dy: -0.1)
         end: Offset.zero,
-      ).animate(
-        CurvedAnimation(parent: controller, curve: curve),
-      );
+      ).animate(CurvedAnimation(parent: controller, curve: curve));
     case AppearAnimationType.slideLeft:
       return Tween<Offset>(
         begin: const Offset(0.1, 0), // 약 10px 오른쪽 (dx: 0.1)
         end: Offset.zero,
-      ).animate(
-        CurvedAnimation(parent: controller, curve: curve),
-      );
+      ).animate(CurvedAnimation(parent: controller, curve: curve));
     case AppearAnimationType.slideRight:
       return Tween<Offset>(
         begin: const Offset(-0.1, 0), // 약 10px 왼쪽 (dx: -0.1)
         end: Offset.zero,
-      ).animate(
-        CurvedAnimation(parent: controller, curve: curve),
-      );
+      ).animate(CurvedAnimation(parent: controller, curve: curve));
     case AppearAnimationType.fadeIn:
       return Tween<Offset>(
         begin: Offset.zero,
         end: Offset.zero,
-      ).animate(
-        CurvedAnimation(parent: controller, curve: curve),
-      );
+      ).animate(CurvedAnimation(parent: controller, curve: curve));
   }
 }

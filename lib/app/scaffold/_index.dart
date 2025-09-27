@@ -8,5 +8,6 @@ export 'package:rw_portfolio/core/index_manager/state/index_state.dart';
 export 'package:rw_portfolio/core/utils/extensions.dart';
 export 'package:rw_portfolio/app/router/public.dart';
 export 'package:rw_portfolio/app/scaffold/end_drawer/end_drawer.dart';
-export 'package:rw_portfolio/core/design_system/animated_widgets/main_routing_animation.dart'
-    show AnimatedPageWrapper;
+export 'package:rw_portfolio/l10n/app_localizations.dart' show AppLocalizations;
+export 'package:rw_portfolio/app/scaffold/utils/scafoold_string.dart';
+export 'package:rw_portfolio/app/scaffold/utils/index_state_mapper.dart';

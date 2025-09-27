@@ -12,14 +12,14 @@ class IndexScaffold extends ConsumerWidget {
       appBar: myAppBar(
         context: context,
         ref: ref,
-        title: "Index",
+        titleText: AnimationAppear(child: Text(ScaffoldString.index(context))),
         actions: [
           positiveButton(
             text: localeState.state.locale.languageCode.toUpperCase(),
             onPressed: () => ref.read(localeProvider.notifier).toggleLocale(),
           ),
           SizedBox(width: 8),
-          Text('Created by Rwkim'),
+          Text(ScaffoldString.createdBy(context)),
           SizedBox(width: 20),
         ],
       ),

@@ -28,4 +28,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get appealPoint => '개발자로서 매력 포인트';
+
+  @override
+  String get createdBy => '제작자 김락원';
 }
