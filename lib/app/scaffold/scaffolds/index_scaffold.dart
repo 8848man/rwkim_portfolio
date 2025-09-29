@@ -18,21 +18,40 @@ class IndexScaffold extends ConsumerWidget {
             text: localeState.state.locale.languageCode.toUpperCase(),
             onPressed: () => ref.read(localeProvider.notifier).toggleLocale(),
           ),
-          SizedBox(width: 8),
-          Text(ScaffoldString.createdBy(context)),
-          SizedBox(width: 20),
+          SizedBox(width: 16),
         ],
       ),
       endDrawer: EndDrawer(),
-      body: indexContents(child),
+      body: indexContents(context, child),
     );
   }
-}
 
-Widget indexDrawer() {
-  return Drawer();
-}
+  Widget indexContents(BuildContext context, Widget child) {
+    return Stack(children: [child, createdBy(context)]);
+  }
 
-Widget indexContents(Widget child) {
-  return Stack(children: [child]);
+  Widget indexBackground(BuildContext context) {
+    return Positioned.fill(
+      child: Image.asset(
+        "assets/images/main_image.webp",
+        fit: BoxFit.cover,
+        alignment: Alignment.center,
+      ),
+    );
+  }
+
+  Widget createdBy(BuildContext context) {
+    return Positioned(
+      left: 16, // 좌측 여백
+      bottom: 16, // 하단 여백
+      child: Positioned(
+        left: 16, // 좌측 여백
+        bottom: 16, // 하단 여백
+        child: Text(
+          ScaffoldString.createdBy(context),
+          style: TextStyle(fontSize: 8),
+        ),
+      ),
+    );
+  }
 }

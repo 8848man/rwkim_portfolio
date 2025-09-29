@@ -218,7 +218,7 @@ abstract class AppLocalizations {
   /// No description provided for @information.
   ///
   /// In en, this message translates to:
-  /// **'information'**
+  /// **'info'**
   String get information;
 
   /// No description provided for @experience.

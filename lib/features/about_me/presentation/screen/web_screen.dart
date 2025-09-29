@@ -5,7 +5,7 @@ class AboutMeWebScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final mediaHeight = MediaQuery.of(context).size.height;
+    final mediaHeight = MediaQuery.of(context).size.height - appBarHeight;
     final mediaWidth = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
       child: Column(
