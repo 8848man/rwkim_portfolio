@@ -32,8 +32,4 @@ class AboutMeFirstSection extends ConsumerWidget {
       ],
     );
   }
-
-  Widget profilePicture() {
-    return Container(color: Colors.white);
-  }
 }

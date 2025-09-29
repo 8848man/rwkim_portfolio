@@ -12,7 +12,9 @@ Widget tendencyCard(
           opaque: false, // 배경 투명하게 (다이얼로그처럼 보이게)
           barrierColor: Colors.black54, // 다이얼로그 배경색
           transitionDuration: Duration(milliseconds: 500),
-          pageBuilder: (_, __, ___) => TendencyDialog(heroTag: heroTag ?? ''),
+          pageBuilder:
+              (_, __, ___) =>
+                  TendencyDialog(heroTag: heroTag ?? '', data: data),
         ),
       );
     },
@@ -76,25 +78,48 @@ Widget tendencyProgressBar({required double score, required String name}) {
   );
 }
 
-Widget tendencyExplainInteg() {
+Widget tendencyExplainInteg(BuildContext context, List<Tendency> data) {
   return MyContentsBox(
     child: SingleChildScrollView(
       child: Column(
-        children: [
-          tendencyExplain(),
-          tendencyExplain(),
-          tendencyExplain(),
-          tendencyExplain(),
-        ],
+        children: List.generate(
+          data.length,
+          (index) => tendencyExplain(context, 'tendency$index', data[index]),
+        ),
       ),
-    ),
+    ).sizedBox(height: double.infinity),
   );
 }
 
-Widget tendencyExplain() {
-  return SizedBox(
-    height: 100,
-    width: double.infinity,
-    child: MyContentsBox(child: Center()),
+Widget tendencyExplain(
+  BuildContext context,
+  String heroTag,
+  Tendency tendency,
+) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.of(context).push(
+        PageRouteBuilder(
+          opaque: false, // 배경 투명하게 (다이얼로그처럼 보이게)
+          barrierColor: Colors.black54, // 다이얼로그 배경색
+          transitionDuration: Duration(milliseconds: 500),
+          pageBuilder:
+              (_, __, ___) => TendencyDialog(heroTag: heroTag, data: tendency),
+        ),
+      );
+    },
+    child: Hero(
+      tag: heroTag,
+      child: SizedBox(
+        height: 100,
+        width: double.infinity,
+        child: MyContentsBox(
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            child: Text(tendency.description),
+          ),
+        ),
+      ),
+    ),
   );
 }

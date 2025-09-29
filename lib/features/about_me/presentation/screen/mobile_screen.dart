@@ -21,8 +21,4 @@ class AboutMeMobileScreen extends ConsumerWidget {
       ),
     );
   }
-
-  Widget profilePicture() {
-    return Container(color: Colors.white);
-  }
 }

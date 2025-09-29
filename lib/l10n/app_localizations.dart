@@ -236,7 +236,7 @@ abstract class AppLocalizations {
   /// No description provided for @persistenceDesc.
   ///
   /// In en, this message translates to:
-  /// **'Persistence Descriptions'**
+  /// **'I do not easily give up when difficulties or unexpected issues arise during a project.\nI approach goals step by step with persistence, maintaining focus over long periods.\nRather than merely enduring, I strive to find efficient methods and continuously improve throughout the process.'**
   String get persistenceDesc;
 
   /// No description provided for @creativity.
@@ -248,7 +248,7 @@ abstract class AppLocalizations {
   /// No description provided for @creativityDesc.
   ///
   /// In en, this message translates to:
-  /// **'creativity Descriptions'**
+  /// **'I enjoy exploring new ideas and prefer seeking better methods rather than simply following existing ones.\nWhen faced with challenges, I approach them from different perspectives to suggest differentiated solutions, and I put these ideas into practice through experimentation.'**
   String get creativityDesc;
 
   /// No description provided for @receptivity.
@@ -260,7 +260,7 @@ abstract class AppLocalizations {
   /// No description provided for @receptivityDesc.
   ///
   /// In en, this message translates to:
-  /// **'receptivity Descriptions'**
+  /// **'I respect the opinions of my teammates and embrace new feedback and technologies with an open mind.\nI acknowledge when there are better ways than my own and take them as opportunities for growth.\nWith this attitude, I can adapt flexibly in collaboration and contribute to fostering a positive team atmosphere.'**
   String get receptivityDesc;
 
   /// No description provided for @problemSolvingSkill.
@@ -272,7 +272,7 @@ abstract class AppLocalizations {
   /// No description provided for @problemSolvingSkillDesc.
   ///
   /// In en, this message translates to:
-  /// **'Problem Solving Skill Descriptions'**
+  /// **'When problems occur, I do not only look at the outcomes but also analyze the root causes and design systematic solutions.\nI consider multiple possibilities to identify the optimal alternative, and after execution, I review results and reflect on improvements.\nThrough this process, I proactively lead situations and help ensure projects progress smoothly.'**
   String get problemSolvingSkillDesc;
 }
 
