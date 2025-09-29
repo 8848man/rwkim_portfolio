@@ -10,7 +10,6 @@ class AboutMeMobileScreen extends ConsumerWidget {
         children: [
           SizedBox(height: 300, child: explainMyself(context)),
 
-          // SizedBox(height: 300, child: personalInfo(context)),
           Row(
             children: [
               personalInfo(context).expand(flex: 6),

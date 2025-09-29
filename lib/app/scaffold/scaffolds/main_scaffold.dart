@@ -38,52 +38,62 @@ class MainScaffold extends ConsumerWidget {
             text: localeState.state.locale.languageCode.toUpperCase(),
             onPressed: () => ref.read(localeProvider.notifier).toggleLocale(),
           ),
-          SizedBox(width: 8),
-          Text(
-            ScaffoldString.createdBy(context),
-            style: TextStyle(color: Colors.white),
-          ),
-          SizedBox(width: 20),
+          SizedBox(width: 16),
         ],
       ),
       endDrawer: EndDrawer(),
-      body: mainContents(child, childPath),
+      body: mainContents(context, child, childPath),
     );
   }
-}
 
-Widget mainDrawer() {
-  return Drawer();
-}
+  Widget mainTitle(String title) {
+    return AnimationAppear(
+      key: ValueKey(title),
+      child: Text(title, style: TextStyle(color: Colors.white)),
+    );
+  }
 
-Widget mainTitle(String title) {
-  return AnimationAppear(
-    key: ValueKey(title),
-    child: Text(title, style: TextStyle(color: Colors.white)),
-  );
-}
+  Widget mainContents(BuildContext context, Widget child, String? childKey) {
+    return Stack(
+      children: [
+        mainBackground(context),
+        Padding(
+          padding: EdgeInsetsGeometry.only(top: appBarHeight),
+          child: AnimationAppear(
+            key: ValueKey(childKey),
+            animationType: AppearAnimationType.slideRight,
+            child: child,
+          ),
+        ),
+        createdBy(context),
+      ],
+    );
+  }
 
-Widget mainContents(Widget child, String? childKey) {
-  return Stack(
-    children: [
-      mainBackground(),
-      AnimationAppear(
-        key: ValueKey(childKey),
-        animationType: AppearAnimationType.slideRight,
-        child: child,
+  Widget mainBackground(BuildContext context) {
+    return Positioned.fill(
+      child: Image.asset(
+        "assets/images/main_image.webp",
+        fit: BoxFit.cover,
+        alignment: Alignment.center,
       ),
-    ],
-  );
-}
+    );
+  }
 
-Widget mainBackground() {
-  return Positioned.fill(
-    child: Image.asset(
-      "assets/images/main_image.webp",
-      fit: BoxFit.cover, // 화면 꽉 채우기
-      alignment: Alignment.center, // 중앙 기준
-    ),
-  );
+  Widget createdBy(BuildContext context) {
+    return Positioned(
+      left: 16, // 좌측 여백
+      bottom: 16, // 하단 여백
+      child: Positioned(
+        left: 16, // 좌측 여백
+        bottom: 16, // 하단 여백
+        child: Text(
+          ScaffoldString.createdBy(context),
+          style: TextStyle(fontSize: 8, color: Colors.white),
+        ),
+      ),
+    );
+  }
 }
 
 class AnimatedTab extends ConsumerWidget {

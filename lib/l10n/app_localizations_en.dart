@@ -69,7 +69,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get award => 'Award : PLC In-school competition';
 
   @override
-  String get information => 'information';
+  String get information => 'info';
 
   @override
   String get experience => 'Experience';

@@ -47,21 +47,18 @@ Widget personalInfo(BuildContext context) {
     AboutMeString.hobby(context),
   ];
   return MyContentsBox(
-    child: Padding(
-      padding: EdgeInsets.all(16),
-      child: Stack(
-        children: [
-          appearScrollView(texts),
-          Positioned(
-            child: MyContentsBox(
-              child: myText(
-                AboutMeString.information(context),
-                style: TextStyle(fontSize: 18),
-              ),
+    child: Stack(
+      children: [
+        Padding(padding: EdgeInsets.all(16), child: appearScrollView(texts)),
+        Positioned(
+          child: MyContentsBox(
+            child: myText(
+              AboutMeString.information(context),
+              style: TextStyle(fontSize: 18),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     ),
   );
 }
@@ -74,21 +71,20 @@ Widget description(BuildContext context) {
     AboutMeString.award(context),
   ];
   return MyContentsBox(
-    child: Padding(
-      padding: EdgeInsets.all(16),
-      child: Stack(
-        children: [
-          appearScrollView(texts),
-          Positioned(
-            child: MyContentsBox(
-              child: myText(
-                AboutMeString.experience(context),
-                style: TextStyle(fontSize: 18),
-              ),
+    child: Stack(
+      children: [
+        Padding(padding: EdgeInsets.all(16), child: appearScrollView(texts)),
+        Positioned(
+          left: 2,
+          top: 2,
+          child: MyContentsBox(
+            child: myText(
+              AboutMeString.experience(context),
+              style: TextStyle(fontSize: 18),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     ),
   );
 }
