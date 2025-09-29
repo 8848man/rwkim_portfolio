@@ -37,4 +37,40 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get amFirstSectionLowerString => 'Obsessed on Architecture';
+
+  @override
+  String get name => 'NAME : RAKWON KIM';
+
+  @override
+  String get email => 'EMAIL : 8848man@naver.com';
+
+  @override
+  String get bloodType => 'BLOODTYPE : AB';
+
+  @override
+  String get mbti => 'MBTI : INTP';
+
+  @override
+  String get birthDate => 'BIRTHDATE : 1996 - 04 - 23';
+
+  @override
+  String get hobby => 'HOBBY : GAME, READ BOOKS, CODING, BOXING ... etc';
+
+  @override
+  String get education => 'Education : Bucheon University';
+
+  @override
+  String get major => 'Major : Electronics';
+
+  @override
+  String get qualifications => 'Qualifications : Industrial Engineer Information Processing';
+
+  @override
+  String get award => 'Award : PLC In-school competition';
+
+  @override
+  String get information => 'information';
+
+  @override
+  String get experience => 'Experience';
 }

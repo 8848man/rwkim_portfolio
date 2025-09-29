@@ -8,5 +8,17 @@
   "appealPoint" : "AppealPoint as Dev",
   "createdBy" : "Created By RWKim",
   "amFirstSectionUpperString" : "Specialist of State Management",
-  "amFirstSectionLowerString" : "Obsessed on Architecture"
+  "amFirstSectionLowerString" : "Obsessed on Architecture",
+  "name" : "NAME : RAKWON KIM",
+  "email" : "EMAIL : 8848man@naver.com",
+  "bloodType" : "BLOODTYPE : AB",
+  "mbti" : "MBTI : INTP",
+  "birthDate" : "BIRTHDATE : 1996 - 04 - 23",
+  "hobby" : "HOBBY : GAME, READ BOOKS, CODING, BOXING ... etc",
+  "education" : "Education : Bucheon University",
+  "major" : "Major : Electronics",
+  "qualifications" : "Qualifications : Industrial Engineer Information Processing",
+  "award" : "Award : PLC In-school competition",
+  "information" : "information",
+  "experience" : "Experience"
 }

@@ -33,5 +33,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  
+  fonts:
+    - family: NoonnuBasicGothic
+      fonts:
+        - asset: assets/fonts/NoonnuBasicGothicRegular.otf
   assets:
-    - lib/assets/images/
+    - assets/images/

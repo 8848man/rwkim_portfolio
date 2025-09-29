@@ -79,7 +79,7 @@ Widget mainContents(Widget child, String? childKey) {
 Widget mainBackground() {
   return Positioned.fill(
     child: Image.asset(
-      "lib/assets/images/main_image.webp",
+      "assets/images/main_image.webp",
       fit: BoxFit.cover, // 화면 꽉 채우기
       alignment: Alignment.center, // 중앙 기준
     ),
