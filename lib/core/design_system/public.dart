@@ -6,3 +6,4 @@ export './buttons/buttons.dart';
 export './colors/colors.dart';
 export './texts/pf_texts.dart';
 export './boxes/my_contents_box.dart';
+export './layouts/main_web_section_layout.dart';

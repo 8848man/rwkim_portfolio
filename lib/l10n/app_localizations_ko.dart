@@ -73,4 +73,28 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get experience => '경력';
+
+  @override
+  String get persistence => '인내심';
+
+  @override
+  String get persistenceDesc => '인내심 설명';
+
+  @override
+  String get creativity => '창의성';
+
+  @override
+  String get creativityDesc => '창의성 설명';
+
+  @override
+  String get receptivity => '수용성';
+
+  @override
+  String get receptivityDesc => '수용성 설명';
+
+  @override
+  String get problemSolvingSkill => '문제 해결 능력';
+
+  @override
+  String get problemSolvingSkillDesc => '문제 해결 능력 설명';
 }

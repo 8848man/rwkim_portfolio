@@ -20,5 +20,13 @@
   "qualifications" : "자격증 : 정보처리 산업기사",
   "award" : "수상 이력 : PLC 교내 경진대회",
   "information" : "정보",
-  "experience" : "경력"
+  "experience" : "경력",
+  "persistence" : "인내심",
+  "persistenceDesc" : "인내심 설명",
+  "creativity" : "창의성",
+  "creativityDesc" : "창의성 설명",
+  "receptivity" : "수용성",
+  "receptivityDesc" : "수용성 설명",
+  "problemSolvingSkill" : "문제 해결 능력",
+  "problemSolvingSkillDesc" : "문제 해결 능력 설명"
 }

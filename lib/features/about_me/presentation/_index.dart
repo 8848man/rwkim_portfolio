@@ -8,7 +8,8 @@ export 'package:rw_portfolio/core/design_system/public.dart'
         myText,
         appearScrollView,
         AnimationAppear,
-        MyContentsBox;
+        MyContentsBox,
+        MainWebSectionLayout;
 export 'package:rw_portfolio/core/utils/public.dart';
 export 'package:rw_portfolio/l10n/app_localizations.dart';
 
