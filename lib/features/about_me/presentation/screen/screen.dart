@@ -5,14 +5,11 @@ class AboutMeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final mediaHeight = MediaQuery.of(context).size.height;
-    final mediaWidth = MediaQuery.of(context).size.width;
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          AboutMeFirstSection(mediaHeight: mediaHeight, mediaWidth: mediaWidth),
-        ],
-      ),
-    );
+    MediaQueryData mediaQuery = MediaQuery.of(context);
+    if (mediaQuery.size.width > 600) {
+      return const AboutMeWebScreen();
+    } else {
+      return const AboutMeMobileScreen();
+    }
   }
 }

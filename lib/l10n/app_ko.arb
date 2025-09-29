@@ -8,5 +8,17 @@
   "appealPoint" : "개발자로서 매력 포인트",
   "createdBy" : "제작자 김락원",
   "amFirstSectionUpperString" : "상태관리 전문가",
-  "amFirstSectionLowerString" : "아키텍쳐에 중독된 개발자"
+  "amFirstSectionLowerString" : "아키텍쳐에 중독된 개발자",
+  "name" : "이름 : 김락원",
+  "email" : "이메일 : 8848man@naver.com",
+  "bloodType" : "혈액형 : AB",
+  "mbti" : "MBTI : INTP",
+  "birthDate" : "생일 : 1996 - 04 - 23",
+  "hobby" : "취미 : 게임, 독서, 코딩, 복싱 ... 등등",
+  "education" : "학력 : 부천대",
+  "major" : "전공 : 전자과",
+  "qualifications" : "자격증 : 정보처리 산업기사",
+  "award" : "수상 이력 : PLC 교내 경진대회",
+  "information" : "정보",
+  "experience" : "경력"
 }

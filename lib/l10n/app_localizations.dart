@@ -154,6 +154,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Obsessed on Architecture'**
   String get amFirstSectionLowerString;
+
+  /// No description provided for @name.
+  ///
+  /// In en, this message translates to:
+  /// **'NAME : RAKWON KIM'**
+  String get name;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'EMAIL : 8848man@naver.com'**
+  String get email;
+
+  /// No description provided for @bloodType.
+  ///
+  /// In en, this message translates to:
+  /// **'BLOODTYPE : AB'**
+  String get bloodType;
+
+  /// No description provided for @mbti.
+  ///
+  /// In en, this message translates to:
+  /// **'MBTI : INTP'**
+  String get mbti;
+
+  /// No description provided for @birthDate.
+  ///
+  /// In en, this message translates to:
+  /// **'BIRTHDATE : 1996 - 04 - 23'**
+  String get birthDate;
+
+  /// No description provided for @hobby.
+  ///
+  /// In en, this message translates to:
+  /// **'HOBBY : GAME, READ BOOKS, CODING, BOXING ... etc'**
+  String get hobby;
+
+  /// No description provided for @education.
+  ///
+  /// In en, this message translates to:
+  /// **'Education : Bucheon University'**
+  String get education;
+
+  /// No description provided for @major.
+  ///
+  /// In en, this message translates to:
+  /// **'Major : Electronics'**
+  String get major;
+
+  /// No description provided for @qualifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Qualifications : Industrial Engineer Information Processing'**
+  String get qualifications;
+
+  /// No description provided for @award.
+  ///
+  /// In en, this message translates to:
+  /// **'Award : PLC In-school competition'**
+  String get award;
+
+  /// No description provided for @information.
+  ///
+  /// In en, this message translates to:
+  /// **'information'**
+  String get information;
+
+  /// No description provided for @experience.
+  ///
+  /// In en, this message translates to:
+  /// **'Experience'**
+  String get experience;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -26,7 +26,7 @@ class App extends ConsumerWidget {
       locale: localeState.state.locale,
       debugShowCheckedModeBanner: false,
       routerConfig: router,
-      theme: ThemeData(useMaterial3: true),
+      theme: ThemeData(useMaterial3: true, fontFamily: 'NoonnuBasicGothic'),
       builder: (context, child) {
         // MaterialApp 내부에서 ScaffoldMessenger가 보장됨
         return WrapperAdapter(

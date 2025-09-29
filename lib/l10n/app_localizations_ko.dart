@@ -37,4 +37,40 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get amFirstSectionLowerString => '아키텍쳐에 중독된 개발자';
+
+  @override
+  String get name => '이름 : 김락원';
+
+  @override
+  String get email => '이메일 : 8848man@naver.com';
+
+  @override
+  String get bloodType => '혈액형 : AB';
+
+  @override
+  String get mbti => 'MBTI : INTP';
+
+  @override
+  String get birthDate => '생일 : 1996 - 04 - 23';
+
+  @override
+  String get hobby => '취미 : 게임, 독서, 코딩, 복싱 ... 등등';
+
+  @override
+  String get education => '학력 : 부천대';
+
+  @override
+  String get major => '전공 : 전자과';
+
+  @override
+  String get qualifications => '자격증 : 정보처리 산업기사';
+
+  @override
+  String get award => '수상 이력 : PLC 교내 경진대회';
+
+  @override
+  String get information => '정보';
+
+  @override
+  String get experience => '경력';
 }
