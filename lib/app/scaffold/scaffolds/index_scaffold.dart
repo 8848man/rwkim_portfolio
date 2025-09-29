@@ -23,7 +23,7 @@ class IndexScaffold extends ConsumerWidget {
           SizedBox(width: 20),
         ],
       ),
-      endDrawer: endDrawer(),
+      endDrawer: EndDrawer(),
       body: indexContents(child),
     );
   }

@@ -46,7 +46,7 @@ class MainScaffold extends ConsumerWidget {
           SizedBox(width: 20),
         ],
       ),
-      endDrawer: endDrawer(),
+      endDrawer: EndDrawer(),
       body: mainContents(child, childPath),
     );
   }
@@ -110,7 +110,7 @@ class AnimatedTab extends ConsumerWidget {
                 onTap: () {
                   ref
                       .read(appRouterProvider)
-                      .replaceNamed(routeNameFromTitle(titles[index]));
+                      .replaceNamed(routeNameMapper(titles[index]));
                 },
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
@@ -141,22 +141,5 @@ class AnimatedTab extends ConsumerWidget {
         ),
       ),
     );
-  }
-}
-
-String routeNameFromTitle(String title) {
-  switch (title) {
-    case '저에 대해서':
-      return 'aboutMe';
-    case '성향':
-      return 'tendency';
-    case '보유 역량':
-      return 'skill';
-    case '프로젝트':
-      return 'projects';
-    case '개발자로서 매력 포인트':
-      return 'appealPoint';
-    default:
-      throw Exception('Unknown title: $title');
   }
 }
