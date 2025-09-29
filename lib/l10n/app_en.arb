@@ -20,5 +20,13 @@
   "qualifications" : "Qualifications : Industrial Engineer Information Processing",
   "award" : "Award : PLC In-school competition",
   "information" : "info",
-  "experience" : "Experience"
+  "experience" : "Experience",
+  "persistence" : "Persistence",
+  "persistenceDesc" : "Persistence Descriptions",
+  "creativity" : "Creativity",
+  "creativityDesc" : "creativity Descriptions",
+  "receptivity" : "Receptivity",
+  "receptivityDesc" : "receptivity Descriptions",
+  "problemSolvingSkill" : "Problem Solving Skill",
+  "problemSolvingSkillDesc" : "Problem Solving Skill Descriptions"
 }

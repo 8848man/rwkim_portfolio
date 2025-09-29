@@ -44,13 +44,9 @@ class IndexScaffold extends ConsumerWidget {
     return Positioned(
       left: 16, // 좌측 여백
       bottom: 16, // 하단 여백
-      child: Positioned(
-        left: 16, // 좌측 여백
-        bottom: 16, // 하단 여백
-        child: Text(
-          ScaffoldString.createdBy(context),
-          style: TextStyle(fontSize: 8),
-        ),
+      child: Text(
+        ScaffoldString.createdBy(context),
+        style: TextStyle(fontSize: 8),
       ),
     );
   }

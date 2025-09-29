@@ -73,4 +73,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get experience => 'Experience';
+
+  @override
+  String get persistence => 'Persistence';
+
+  @override
+  String get persistenceDesc => 'Persistence Descriptions';
+
+  @override
+  String get creativity => 'Creativity';
+
+  @override
+  String get creativityDesc => 'creativity Descriptions';
+
+  @override
+  String get receptivity => 'Receptivity';
+
+  @override
+  String get receptivityDesc => 'receptivity Descriptions';
+
+  @override
+  String get problemSolvingSkill => 'Problem Solving Skill';
+
+  @override
+  String get problemSolvingSkillDesc => 'Problem Solving Skill Descriptions';
 }

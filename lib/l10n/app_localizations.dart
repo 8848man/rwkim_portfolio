@@ -226,6 +226,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Experience'**
   String get experience;
+
+  /// No description provided for @persistence.
+  ///
+  /// In en, this message translates to:
+  /// **'Persistence'**
+  String get persistence;
+
+  /// No description provided for @persistenceDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Persistence Descriptions'**
+  String get persistenceDesc;
+
+  /// No description provided for @creativity.
+  ///
+  /// In en, this message translates to:
+  /// **'Creativity'**
+  String get creativity;
+
+  /// No description provided for @creativityDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'creativity Descriptions'**
+  String get creativityDesc;
+
+  /// No description provided for @receptivity.
+  ///
+  /// In en, this message translates to:
+  /// **'Receptivity'**
+  String get receptivity;
+
+  /// No description provided for @receptivityDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'receptivity Descriptions'**
+  String get receptivityDesc;
+
+  /// No description provided for @problemSolvingSkill.
+  ///
+  /// In en, this message translates to:
+  /// **'Problem Solving Skill'**
+  String get problemSolvingSkill;
+
+  /// No description provided for @problemSolvingSkillDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Problem Solving Skill Descriptions'**
+  String get problemSolvingSkillDesc;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
