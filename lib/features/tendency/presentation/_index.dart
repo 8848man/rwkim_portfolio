@@ -3,7 +3,8 @@ export 'package:rw_portfolio/app/common/build_packages.dart';
 export 'package:rw_portfolio/app/common/packages.dart';
 export 'package:rw_portfolio/core/index_manager/public.dart'
     show indexStateProvider, IndexState;
-export 'package:rw_portfolio/core/consts/public.dart' show appBarHeight;
+export 'package:rw_portfolio/core/consts/public.dart'
+    show appBarHeight, mobileWidth;
 export 'package:rw_portfolio/core/design_system/public.dart'
     show MainWebSectionLayout, MyContentsBox, AnimationAppear;
 export 'package:rw_portfolio/features/tendency/presentation/screens/web_screen.dart'

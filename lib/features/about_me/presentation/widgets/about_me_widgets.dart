@@ -88,3 +88,15 @@ Widget description(BuildContext context) {
     ),
   );
 }
+
+Widget profilePicture() {
+  return MyContentsBox(
+    child: Positioned.fill(
+      child: Image.asset(
+        "assets/images/profile_image.png",
+        fit: BoxFit.cover,
+        alignment: Alignment.center,
+      ),
+    ),
+  ).sizedBox(height: double.infinity);
+}

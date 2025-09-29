@@ -44,7 +44,7 @@ class TendencyFirstSection extends ConsumerWidget {
         ).expand(flex: 4),
         AnimationAppear(
           delayMs: 500,
-          child: tendencyExplainInteg(),
+          child: tendencyExplainInteg(context, data),
         ).expand(flex: 6),
       ],
     );
