@@ -26,7 +26,7 @@ AppBar webAppBar({
 }) {
   return AppBar(
     backgroundColor: Colors.transparent, // ✅ 투명
-    elevation: 0, // ✅ 그림자 제거
+    elevation: 0,
     title: titleText,
     actions: actions,
   );
@@ -37,15 +37,20 @@ AppBar mobileAppBar({
   required WidgetRef ref,
   Widget? titleText,
 }) {
+  final localeState = ref.read(localeProvider);
   return AppBar(
     backgroundColor: Colors.transparent, // ✅ 투명
-    elevation: 0, // ✅ 그림자 제거
+    elevation: 0,
     title: titleText,
     actions: [
+      positiveButton(
+        text: localeState.state.locale.languageCode.toUpperCase(),
+        onPressed: () => ref.read(localeProvider.notifier).toggleLocale(),
+      ),
       Builder(
         builder:
             (context) => IconButton(
-              icon: const Icon(Icons.menu),
+              icon: const Icon(Icons.menu, color: Colors.grey),
               onPressed: () {
                 Scaffold.of(context).openEndDrawer();
               },
