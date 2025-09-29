@@ -6,5 +6,7 @@
   "tendency" : "Tendency",
   "projects" : "Projects",
   "appealPoint" : "AppealPoint as Dev",
-  "createdBy" : "Created By RWKim"
+  "createdBy" : "Created By RWKim",
+  "amFirstSectionUpperString" : "Specialist of State Management",
+  "amFirstSectionLowerString" : "Obsessed on Architecture"
 }

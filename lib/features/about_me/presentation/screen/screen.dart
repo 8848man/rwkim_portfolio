@@ -10,18 +10,7 @@ class AboutMeScreen extends ConsumerWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(
-            width: mediaWidth,
-            height: mediaHeight,
-            child: Center(
-              child: Container(
-                height: 100,
-                width: 100,
-                color: Colors.white,
-                child: Center(child: Text("about me")),
-              ),
-            ),
-          ),
+          AboutMeFirstSection(mediaHeight: mediaHeight, mediaWidth: mediaWidth),
         ],
       ),
     );

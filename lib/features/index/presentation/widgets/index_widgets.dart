@@ -69,7 +69,9 @@ Widget appealPointContents(BuildContext context, WidgetRef ref) {
     child: GestureDetector(
       onTap:
           () => {
-            ref.read(appRouterProvider).go(RouterPath.appealPointPath.path),
+            ref
+                .read(appRouterProvider)
+                .replace(RouterPath.appealPointPath.path),
           },
       child: indexAnimatedContainer(
         delayMs: 450,

@@ -1,6 +1,6 @@
 import '../_index.dart';
 
-/// ✅ State + 로직을 한 곳에서 관리하는 Notifier
+/// State + 로직을 한 곳에서 관리하는 Notifier
 class LocaleNotifier extends StateNotifier<LocaleState> {
   LocaleNotifier() : super(LocaleState.initial());
 

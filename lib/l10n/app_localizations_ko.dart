@@ -31,4 +31,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get createdBy => '제작자 김락원';
+
+  @override
+  String get amFirstSectionUpperString => '상태관리 전문가';
+
+  @override
+  String get amFirstSectionLowerString => '아키텍쳐에 중독된 개발자';
 }

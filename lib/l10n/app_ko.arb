@@ -6,5 +6,7 @@
   "tendency" : "성향",
   "projects" : "프로젝트",
   "appealPoint" : "개발자로서 매력 포인트",
-  "createdBy" : "제작자 김락원"
+  "createdBy" : "제작자 김락원",
+  "amFirstSectionUpperString" : "상태관리 전문가",
+  "amFirstSectionLowerString" : "아키텍쳐에 중독된 개발자"
 }
