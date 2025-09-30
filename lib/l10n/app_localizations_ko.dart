@@ -97,4 +97,73 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get problemSolvingSkillDesc => '문제가 발생했을 때 단순히 결과만 보는 것이 아니라, 원인을 분석하고 해결 과정을 체계적으로 설계합니다.\n여러 가능성을 고려해 최적의 대안을 찾고, 실행 후에도 결과를 검토하며 개선점을 반영합니다.\n이 과정에서 주도적으로 상황을 이끌고, 프로젝트가 안정적으로 진행될 수 있도록 합니다.';
+
+  @override
+  String get frontend => '프론트엔드';
+
+  @override
+  String get backend => '백엔드';
+
+  @override
+  String get flutter => '플러터';
+
+  @override
+  String get flutterDesc => '위젯 프레임과 상태 관리 등을 능숙하게 다루며, 런타임 메모리 캐시, device 캐시 데이터 저장 등의 복잡한 로직을 처리할 수 있습니다.';
+
+  @override
+  String get flutterProj => '데일리스쿨, 마챗, 마챗 tts, 데일리스쿨2';
+
+  @override
+  String get python => '파이썬';
+
+  @override
+  String get pythonDesc => '파이썬을 이용하여 리버스 프록시 서버를 만들 수 있습니다. json 데이터를 처리, REST API 구조를 만들 수 있습니다.';
+
+  @override
+  String get pythonProj => '';
+
+  @override
+  String get firebase => '파이어베이스';
+
+  @override
+  String get firebaseDesc => 'Stream을 이용한 실시간 통신, NoSQL 데이터 구조를 설계할 수 있으며, 여러 firebase 기능들을 능수능란하게 다룹니다.';
+
+  @override
+  String get firebaseProj => '';
+
+  @override
+  String get googleCloud => '구글 클라우드';
+
+  @override
+  String get googleCloudDesc => '구글 클라우드를 컨테이너화된 서버를 배포할 수 있습니다.';
+
+  @override
+  String get googleCloudProj => '';
+
+  @override
+  String get go => '고';
+
+  @override
+  String get goDesc => '간단한 고 언어로 만들어진 API 서버를 만들 수 있습니다.';
+
+  @override
+  String get goProj => '';
+
+  @override
+  String get cpp => 'C++';
+
+  @override
+  String get cppDesc => '.Net 프레임워크를 이용한 프로그램에 능통합니다. 어댑터 패턴 및 기본적인 RDBM을 다룰 수 있습니다.';
+
+  @override
+  String get cppProj => '';
+
+  @override
+  String get docker => '도커';
+
+  @override
+  String get dockerDesc => '여러 빌드 환경을 세팅하여 애플리케이션 이미지를 빌드할 수 있습니다.';
+
+  @override
+  String get dockerProj => '';
 }

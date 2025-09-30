@@ -6,11 +6,7 @@ class SkillsFirstSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final SkillModel dummySkill = SkillModel(
-      title: 'flutter',
-      description: 'description',
-      projects: [],
-    );
+    final List<SkillModel> skillList = SkillListFactory.getAll(context);
 
     return MainWebSectionLayout(
       child: SizedBox.expand(
@@ -22,11 +18,11 @@ class SkillsFirstSection extends StatelessWidget {
             mainAxisSpacing: 4,
             mainAxisExtent: 120,
           ),
-          itemCount: 10,
+          itemCount: skillList.length,
           itemBuilder: (context, index) {
             return AnimationAppear(
               delayMs: mainAnimationDelayMs + index * 100,
-              child: singleSkillWidget(dummySkill),
+              child: SingleSkil(skill: skillList[index]),
             );
           },
         ),

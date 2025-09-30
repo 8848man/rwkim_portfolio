@@ -274,6 +274,144 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'When problems occur, I do not only look at the outcomes but also analyze the root causes and design systematic solutions.\nI consider multiple possibilities to identify the optimal alternative, and after execution, I review results and reflect on improvements.\nThrough this process, I proactively lead situations and help ensure projects progress smoothly.'**
   String get problemSolvingSkillDesc;
+
+  /// No description provided for @frontend.
+  ///
+  /// In en, this message translates to:
+  /// **'Frontend'**
+  String get frontend;
+
+  /// No description provided for @backend.
+  ///
+  /// In en, this message translates to:
+  /// **'Backend'**
+  String get backend;
+
+  /// No description provided for @flutter.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter'**
+  String get flutter;
+
+  /// No description provided for @flutterDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter description'**
+  String get flutterDesc;
+
+  /// No description provided for @flutterProj.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get flutterProj;
+
+  /// No description provided for @python.
+  ///
+  /// In en, this message translates to:
+  /// **'Python'**
+  String get python;
+
+  /// No description provided for @pythonDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Python description'**
+  String get pythonDesc;
+
+  /// No description provided for @pythonProj.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get pythonProj;
+
+  /// No description provided for @firebase.
+  ///
+  /// In en, this message translates to:
+  /// **'Firebase'**
+  String get firebase;
+
+  /// No description provided for @firebaseDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Firebase description'**
+  String get firebaseDesc;
+
+  /// No description provided for @firebaseProj.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get firebaseProj;
+
+  /// No description provided for @googleCloud.
+  ///
+  /// In en, this message translates to:
+  /// **'Google Cloud'**
+  String get googleCloud;
+
+  /// No description provided for @googleCloudDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Google Cloud description'**
+  String get googleCloudDesc;
+
+  /// No description provided for @googleCloudProj.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get googleCloudProj;
+
+  /// No description provided for @go.
+  ///
+  /// In en, this message translates to:
+  /// **'Go'**
+  String get go;
+
+  /// No description provided for @goDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Go language description'**
+  String get goDesc;
+
+  /// No description provided for @goProj.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get goProj;
+
+  /// No description provided for @cpp.
+  ///
+  /// In en, this message translates to:
+  /// **'C++'**
+  String get cpp;
+
+  /// No description provided for @cppDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'C++ description'**
+  String get cppDesc;
+
+  /// No description provided for @cppProj.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get cppProj;
+
+  /// No description provided for @docker.
+  ///
+  /// In en, this message translates to:
+  /// **'Docker'**
+  String get docker;
+
+  /// No description provided for @dockerDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Docker description'**
+  String get dockerDesc;
+
+  /// No description provided for @dockerProj.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get dockerProj;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

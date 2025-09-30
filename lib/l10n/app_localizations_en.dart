@@ -97,4 +97,73 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get problemSolvingSkillDesc => 'When problems occur, I do not only look at the outcomes but also analyze the root causes and design systematic solutions.\nI consider multiple possibilities to identify the optimal alternative, and after execution, I review results and reflect on improvements.\nThrough this process, I proactively lead situations and help ensure projects progress smoothly.';
+
+  @override
+  String get frontend => 'Frontend';
+
+  @override
+  String get backend => 'Backend';
+
+  @override
+  String get flutter => 'Flutter';
+
+  @override
+  String get flutterDesc => 'Flutter description';
+
+  @override
+  String get flutterProj => '';
+
+  @override
+  String get python => 'Python';
+
+  @override
+  String get pythonDesc => 'Python description';
+
+  @override
+  String get pythonProj => '';
+
+  @override
+  String get firebase => 'Firebase';
+
+  @override
+  String get firebaseDesc => 'Firebase description';
+
+  @override
+  String get firebaseProj => '';
+
+  @override
+  String get googleCloud => 'Google Cloud';
+
+  @override
+  String get googleCloudDesc => 'Google Cloud description';
+
+  @override
+  String get googleCloudProj => '';
+
+  @override
+  String get go => 'Go';
+
+  @override
+  String get goDesc => 'Go language description';
+
+  @override
+  String get goProj => '';
+
+  @override
+  String get cpp => 'C++';
+
+  @override
+  String get cppDesc => 'C++ description';
+
+  @override
+  String get cppProj => '';
+
+  @override
+  String get docker => 'Docker';
+
+  @override
+  String get dockerDesc => 'Docker description';
+
+  @override
+  String get dockerProj => '';
 }
