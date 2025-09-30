@@ -20,7 +20,10 @@ class MyContentsBox extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               color: Colors.grey.withOpacity(0.7),
             ),
-            child: child,
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.all(Radius.circular(8)),
+              child: child,
+            ),
           ),
         ),
       ),
