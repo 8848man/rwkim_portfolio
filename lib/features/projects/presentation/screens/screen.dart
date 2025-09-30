@@ -5,13 +5,6 @@ class ProjectsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Center(
-      child: Container(
-        height: 300,
-        width: 300,
-        color: Colors.white,
-        child: Text('projects'),
-      ),
-    );
+    return ProjectsWebScreen();
   }
 }
